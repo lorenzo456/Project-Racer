@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1982357279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982357280}
+  m_Layer: 0
+  m_Name: BackOfCar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1982357280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982357279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.379, y: -0.008, z: -0.639}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8148146346712025701}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1624326990441816634
 GameObject:
   m_ObjectHideFlags: 0
@@ -14503,16 +14533,20 @@ MonoBehaviour:
   carController: {fileID: 8148146346712025707}
   playerCollider: {fileID: 1889169255555536272}
   waypointManager: {fileID: 0}
+  carNormal: {fileID: 8148146346634851089}
+  backOfCar: {fileID: 1982357279}
   trackCount: 0
   camLookAt: {fileID: 2270453325618643691}
   currentSpawnIndex: 0
   actionButtonPressed: 0
   yButton: 0
   aButton: 0
+  backButton: 0
   horizontalAxis: 0
   verticalAxis: 0
   leftTrigger: 0
   rightTrigger: 0
+  normalOffset: 0
 --- !u!1 &8148146346018074377
 GameObject:
   m_ObjectHideFlags: 0
@@ -14650,6 +14684,7 @@ Transform:
   m_Children:
   - {fileID: 8148146346634851088}
   - {fileID: 2270453325618643688}
+  - {fileID: 1982357280}
   m_Father: {fileID: 8148146345303673620}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14684,6 +14719,7 @@ MonoBehaviour:
   boostSpeed: 80
   boostDecreaser: 25
   immunityTime: 3
+  offBound: -5
   steering: 40
   minSpeedToRotate: 0
   deacceleration: 5
@@ -19545,16 +19581,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8345875858960128560}
     m_Modifications:
-    - target: {fileID: 2244781713482859172, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
-        type: 3}
-      propertyPath: m_Name
-      value: Sparks
-      objectReference: {fileID: 0}
-    - target: {fileID: 1857949814455129980, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1979421475681133249, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19610,17 +19636,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1857949814455129980, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244781713482859172, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
+        type: 3}
+      propertyPath: m_Name
+      value: Sparks
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f5e0091e19429c48a7d13aa34bd9de7, type: 3}
---- !u!4 &358621236622198446 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1979421475681133249, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2270453326531781743}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &453322898709295891 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1857949814455129980, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2270453326531781743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &358621236622198446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1979421475681133249, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
     type: 3}
   m_PrefabInstance: {fileID: 2270453326531781743}
   m_PrefabAsset: {fileID: 0}
@@ -19698,16 +19734,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8346121889034574824}
     m_Modifications:
-    - target: {fileID: 2244781713482859172, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
-        type: 3}
-      propertyPath: m_Name
-      value: Sparks
-      objectReference: {fileID: 0}
-    - target: {fileID: 1857949814455129980, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1979421475681133249, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19763,17 +19789,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1857949814455129980, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244781713482859172, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
+        type: 3}
+      propertyPath: m_Name
+      value: Sparks
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f5e0091e19429c48a7d13aa34bd9de7, type: 3}
---- !u!198 &7883881300298942857 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1857949814455129980, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
-    type: 3}
-  m_PrefabInstance: {fileID: 8404262015726526197}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8059682596930518068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1979421475681133249, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8404262015726526197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7883881300298942857 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1857949814455129980, guid: 8f5e0091e19429c48a7d13aa34bd9de7,
     type: 3}
   m_PrefabInstance: {fileID: 8404262015726526197}
   m_PrefabAsset: {fileID: 0}

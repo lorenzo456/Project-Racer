@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Waypoint
   - CarCollider
+  - WaypointManager
   layers:
   - Default
   - TransparentFX

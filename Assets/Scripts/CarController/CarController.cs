@@ -38,6 +38,7 @@ public class CarController : MonoBehaviour
     public float boostSpeed = 200;
     public float boostDecreaser = 25f;
     public float immunityTime = 3;
+    public float offBound = -5;
 
     //rotation
     float rotate, currentRotate;
@@ -66,7 +67,13 @@ public class CarController : MonoBehaviour
     public ParticleSystem[] boosts;
     bool boostPlaying;
     bool boostReset;
-
+    bool carResetTimePassed = true;
+    IEnumerator carResetTimer()
+    {
+        carResetTimePassed = false;
+        yield return new WaitForSeconds(3);
+        carResetTimePassed = true;
+    }
     void Update()
     {
         //Follow Collider
@@ -74,9 +81,10 @@ public class CarController : MonoBehaviour
 
 
         //Check Reset
-        if (Input.GetButtonDown("Cancel"))
+        if (player.backButton == ButtonEnum.ButtonState.ButtonPressed && carResetTimePassed || transform.position.y < offBound)
         {
             player.ResetCarPosition();
+            carResetTimer();
         }
 
         DrivingCheck();
@@ -313,7 +321,7 @@ public class CarController : MonoBehaviour
     {
         if (boosting)
         {
-            if (player.aButton == ButtonEnum.ButtonState.ButtonUp || driftPoints <= 0 || boostReset)
+            if (player.aButton == ButtonEnum.ButtonState.ButtonUp || player.aButton == ButtonEnum.ButtonState.ButtonIdle || driftPoints <= 0 || boostReset)
             {
                 boosting = false;
                 if (boostPlaying)
@@ -332,7 +340,7 @@ public class CarController : MonoBehaviour
         }
         else
         {
-            if (player.aButton == ButtonEnum.ButtonState.ButtonDown)
+            if (player.aButton == ButtonEnum.ButtonState.ButtonPressed)
             {
                 if (driftPoints > 0)
                 {

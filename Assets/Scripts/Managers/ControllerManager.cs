@@ -33,7 +33,7 @@ public class ControllerManager : MonoBehaviour
                 GamePadState testState = GamePad.GetState(testPlayerIndex);
                 if (testState.IsConnected)
                 {
-                    Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
+                   // Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
                     playerIndex = testPlayerIndex;
                     if (!GameManager.instance.CheckIfPlayerDuplicate(i))
                     {
@@ -158,6 +158,21 @@ public class ControllerManager : MonoBehaviour
         ButtonEnum.ButtonState b = ButtonEnum.ButtonState.ButtonIdle;
         ButtonEnum.ButtonState x = ButtonEnum.ButtonState.ButtonIdle;
         ButtonEnum.ButtonState y = ButtonEnum.ButtonState.ButtonIdle;
+        ButtonEnum.ButtonState back = ButtonEnum.ButtonState.ButtonIdle;
+
+
+        if (tempPrevState.Buttons.Back == ButtonState.Pressed && tempCurrentState.Buttons.Back == ButtonState.Pressed)
+        {
+            back = ButtonEnum.ButtonState.ButtonPressed;
+        }
+        if (tempPrevState.Buttons.Back == ButtonState.Released && tempCurrentState.Buttons.Back == ButtonState.Pressed)
+        {
+            back = ButtonEnum.ButtonState.ButtonDown;
+        }
+        if (tempPrevState.Buttons.Back == ButtonState.Pressed && tempCurrentState.Buttons.Back == ButtonState.Released)
+        {
+            back = ButtonEnum.ButtonState.ButtonUp;
+        }
 
 
         if (tempPrevState.Buttons.A == ButtonState.Pressed && tempCurrentState.Buttons.A == ButtonState.Pressed)
@@ -190,7 +205,7 @@ public class ControllerManager : MonoBehaviour
             //Debug.Log("button A is released");
             y = ButtonEnum.ButtonState.ButtonUp;
         }
-
+        /*
         if (tempCurrentState.Triggers.Right > 0)
         {
             Debug.Log("RIGHT TRIGGER: " + tempCurrentState.Triggers.Right);
@@ -210,10 +225,10 @@ public class ControllerManager : MonoBehaviour
         {
             Debug.Log("VERTICAL: " + tempCurrentState.ThumbSticks.Left.Y);
         }
-
+        */
         if (anyControllerFound)
         {
-            GameManager.instance.SetButtonInput((int)tempPlayerIndex, a, b, x, y);
+            GameManager.instance.SetButtonInput((int)tempPlayerIndex, a, b, x, y, back);
             GameManager.instance.SetAxisInput((int)tempPlayerIndex, tempCurrentState.ThumbSticks.Left.Y, tempCurrentState.ThumbSticks.Left.X);
             GameManager.instance.SetTriggers((int)tempPlayerIndex, tempCurrentState.Triggers.Left, tempCurrentState.Triggers.Right);
 

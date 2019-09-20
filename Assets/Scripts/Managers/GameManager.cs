@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public GameObject cameraList;
 
     public static GameManager instance;
-    public Camera mainCamera;
 
     public bool CheckIfPlayerDuplicate(int index)
     {
@@ -32,6 +31,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("ADDED PLAYER");
         GameObject tempPlayer = Instantiate(playerPrefab);
         tempPlayer.transform.position = trackPositions[index].transform.position;
+        tempPlayer.transform.eulerAngles = trackPositions[index].transform.forward;
         Player p = tempPlayer.GetComponent<Player>();
         p.SetPlayerIndex(index);
         GameObject tempCam = Instantiate(cameraPrefab);
@@ -43,10 +43,11 @@ public class GameManager : MonoBehaviour
         players.Add(p);
         screenManager.UpdateScreenRects();
     }
-    public void SetButtonInput(int index, ButtonEnum.ButtonState pressedA = ButtonEnum.ButtonState.ButtonIdle, ButtonEnum.ButtonState pressedB = ButtonEnum.ButtonState.ButtonIdle, ButtonEnum.ButtonState pressedX = ButtonEnum.ButtonState.ButtonIdle, ButtonEnum.ButtonState pressedY = ButtonEnum.ButtonState.ButtonIdle)
+    public void SetButtonInput(int index, ButtonEnum.ButtonState pressedA = ButtonEnum.ButtonState.ButtonIdle, ButtonEnum.ButtonState pressedB = ButtonEnum.ButtonState.ButtonIdle, ButtonEnum.ButtonState pressedX = ButtonEnum.ButtonState.ButtonIdle, ButtonEnum.ButtonState pressedY = ButtonEnum.ButtonState.ButtonIdle, ButtonEnum.ButtonState pressedBack = ButtonEnum.ButtonState.ButtonIdle)
     {
         players[index].aButton = pressedA;
         players[index].yButton = pressedY;
+        players[index].backButton = pressedBack;
     }
 
     public void SetAxisInput(int index, float verticalAxis = 0f, float horizontalAxis = 0f)

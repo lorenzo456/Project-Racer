@@ -19,6 +19,10 @@ public class Player : MonoBehaviour
     public PlayerCollider playerCollider;
     public WaypointManager waypointManager;
 
+    [Header("Stabalizers")]
+    public GameObject carNormal;
+    public GameObject backOfCar;
+
     [Header("TrackInfo")]
     public int trackCount = 0;
 
@@ -33,14 +37,21 @@ public class Player : MonoBehaviour
     [Header("Controls")]
     public ButtonEnum.ButtonState yButton;
     public ButtonEnum.ButtonState aButton;
+    public ButtonEnum.ButtonState backButton;
     public float horizontalAxis;
     public float verticalAxis;
     public float leftTrigger;
     public float rightTrigger;
 
+    public void Start()
+    {
+        waypointManager = GameObject.FindGameObjectWithTag("WaypointManager").GetComponent<WaypointManager>(); 
+    }
+
     private void Update()
     {
         ControllerInputCheck();
+        CheckCarNormal();
 
         if (actionButtonPressed && selectedTrap != null)
         {
@@ -84,7 +95,7 @@ public class Player : MonoBehaviour
         {
             currentSpawnIndex = 0;
             trackCount++;
-            lapText.text = "LAP: " + trackCount.ToString();
+            //lapText.text = "LAP: " + trackCount.ToString();
         }
     }
 
@@ -100,5 +111,23 @@ public class Player : MonoBehaviour
         }
 
         carController.ResetCar();
+    }
+    public float normalOffset = 0;
+
+    public void CheckCarNormal()
+    {
+
+        float backWheelsPosition = (carController.backWheelL.transform.position.z + carController.backWheelR.transform.position.z) * .5f;
+        RaycastHit hit;
+        
+        if(Physics.Raycast(backOfCar.transform.position, carNormal.transform.TransformDirection(-Vector3.up), out hit, Mathf.Infinity))
+        {
+            Debug.Log("hitting " + hit.transform.name);
+        }
+
+        Debug.DrawRay(backOfCar.transform.position, carNormal.transform.TransformDirection(-Vector3.up) * hit.distance, Color.white);
+
+            //carNormal.transform.eulerAngles = Vector3.Lerp(carNormal.transform.eulerAngles, hit.transform.position, Time.deltaTime * 2f);
+        
     }
 }
