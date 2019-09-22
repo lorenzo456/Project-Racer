@@ -14533,7 +14533,7 @@ MonoBehaviour:
   carController: {fileID: 8148146346712025707}
   playerCollider: {fileID: 1889169255555536272}
   waypointManager: {fileID: 0}
-  carNormal: {fileID: 8148146346634851089}
+  carNormal: {fileID: 8342770223439154942}
   backOfCar: {fileID: 1982357279}
   trackCount: 0
   camLookAt: {fileID: 2270453325618643691}
@@ -14622,6 +14622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1889169255590457740}
+  colliderNormal: {x: 0, y: 0, z: 0}
 --- !u!1 &8148146346634851089
 GameObject:
   m_ObjectHideFlags: 0
@@ -14708,7 +14709,6 @@ MonoBehaviour:
   driftPoints: 0
   boosting: 0
   carModel: {fileID: 8148146345773447478}
-  carNormal: {fileID: 8148146346634851088}
   carSphere: {fileID: 8148146346018074383}
   offsetFromSphere: {x: 0, y: 0.5, z: 0}
   disabled: 0
@@ -19667,14 +19667,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8148146346634851088}
     m_Modifications:
-    - target: {fileID: 100012, guid: f646448445cac684aa700a02a5b06ae5, type: 3}
-      propertyPath: m_Name
-      value: Model
-      objectReference: {fileID: 0}
-    - target: {fileID: 100012, guid: f646448445cac684aa700a02a5b06ae5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: f646448445cac684aa700a02a5b06ae5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19717,6 +19709,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: f646448445cac684aa700a02a5b06ae5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: f646448445cac684aa700a02a5b06ae5, type: 3}
+      propertyPath: m_Name
+      value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: f646448445cac684aa700a02a5b06ae5, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

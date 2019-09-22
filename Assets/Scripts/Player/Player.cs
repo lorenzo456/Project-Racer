@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
     [Header("Stabalizers")]
     public GameObject carNormal;
-    public GameObject backOfCar;
+    Vector3 originalForward;
 
     [Header("TrackInfo")]
     public int trackCount = 0;
@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
+        originalForward = transform.forward;
         waypointManager = GameObject.FindGameObjectWithTag("WaypointManager").GetComponent<WaypointManager>(); 
     }
 
@@ -116,18 +117,21 @@ public class Player : MonoBehaviour
 
     public void CheckCarNormal()
     {
-
-        float backWheelsPosition = (carController.backWheelL.transform.position.z + carController.backWheelR.transform.position.z) * .5f;
-        RaycastHit hit;
-        
-        if(Physics.Raycast(backOfCar.transform.position, carNormal.transform.TransformDirection(-Vector3.up), out hit, Mathf.Infinity))
+        if(playerCollider.colliderNormal != new Vector3(0, 1, 0))
         {
-            Debug.Log("hitting " + hit.transform.name);
+            Debug.Log(playerCollider.colliderNormal);
+            Quaternion temp = Quaternion.FromToRotation(carNormal.transform.up, playerCollider.colliderNormal) * carNormal.transform.rotation;
+
+            carNormal.transform.rotation = Quaternion.Lerp(carNormal.transform.rotation, temp, Time.deltaTime * 15);
         }
+        else
+        {
+            carNormal.transform.eulerAngles = carController.transform.eulerAngles;
+            Quaternion temp = Quaternion.FromToRotation(carNormal.transform.up, carController.transform.up) * carNormal.transform.rotation;
 
-        Debug.DrawRay(backOfCar.transform.position, carNormal.transform.TransformDirection(-Vector3.up) * hit.distance, Color.white);
-
-            //carNormal.transform.eulerAngles = Vector3.Lerp(carNormal.transform.eulerAngles, hit.transform.position, Time.deltaTime * 2f);
-        
+            carNormal.transform.rotation = Quaternion.Lerp(carNormal.transform.rotation, temp, Time.deltaTime * 15);
+        }
+       
     }
+
 }

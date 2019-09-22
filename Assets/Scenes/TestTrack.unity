@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 132846534}
   m_Layer: 0
   m_Name: 0 (22)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,7 +886,7 @@ GameObject:
   - component: {fileID: 240755790}
   m_Layer: 0
   m_Name: 0 (8)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -997,7 +997,7 @@ Transform:
   - {fileID: 793556708}
   - {fileID: 2002277007}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &271804987
 PrefabInstance:
@@ -1291,7 +1291,7 @@ GameObject:
   - component: {fileID: 338873042}
   m_Layer: 0
   m_Name: 0 (10)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1504,7 +1504,7 @@ GameObject:
   - component: {fileID: 448364675}
   m_Layer: 0
   m_Name: 0 (24)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1666,7 +1666,7 @@ GameObject:
   - component: {fileID: 479959680}
   m_Layer: 0
   m_Name: 0 (13)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1757,7 +1757,7 @@ GameObject:
   - component: {fileID: 524323891}
   m_Layer: 0
   m_Name: 0 (12)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2036,7 +2036,7 @@ GameObject:
   - component: {fileID: 610144263}
   m_Layer: 0
   m_Name: 0 (3)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2267,7 +2267,7 @@ PrefabInstance:
     - target: {fileID: 2999749194352650237, guid: 84fccc6aa2a7c124eb91dba910a0374a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2999749194352650237, guid: 84fccc6aa2a7c124eb91dba910a0374a,
         type: 3}
@@ -2416,7 +2416,7 @@ GameObject:
   - component: {fileID: 723521389}
   m_Layer: 0
   m_Name: 0 (26)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2507,7 +2507,7 @@ GameObject:
   - component: {fileID: 731479720}
   m_Layer: 0
   m_Name: 0 (11)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2598,7 +2598,7 @@ GameObject:
   - component: {fileID: 744496737}
   m_Layer: 0
   m_Name: 0 (23)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2948,7 +2948,7 @@ GameObject:
   - component: {fileID: 799941060}
   m_Layer: 0
   m_Name: 0 (14)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3039,7 +3039,7 @@ GameObject:
   - component: {fileID: 818984569}
   m_Layer: 0
   m_Name: 0 (20)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3463,7 +3463,7 @@ GameObject:
   - component: {fileID: 1027542516}
   m_Layer: 0
   m_Name: 0 (1)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3554,7 +3554,7 @@ GameObject:
   - component: {fileID: 1033957763}
   m_Layer: 0
   m_Name: 0 (19)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3660,7 +3660,7 @@ Transform:
   m_Children:
   - {fileID: 1838902535}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1056197716
 GameObject:
@@ -3735,7 +3735,7 @@ GameObject:
   - component: {fileID: 1060450603}
   m_Layer: 0
   m_Name: 0 (2)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3856,7 +3856,7 @@ GameObject:
   - component: {fileID: 1072066854}
   m_Layer: 0
   m_Name: 0 (21)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4706,7 +4706,7 @@ Transform:
   - {fileID: 387133547}
   - {fileID: 831510465}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1327457917
 PrefabInstance:
@@ -4720,6 +4720,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 40793142, guid: 393fee2365e4b474db4f1a0180abe099, type: 3}
+      propertyPath: p3Screen
+      value: 
+      objectReference: {fileID: 1652519401}
     - target: {fileID: 6050000684875114386, guid: 393fee2365e4b474db4f1a0180abe099,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4825,10 +4829,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 40793142, guid: 393fee2365e4b474db4f1a0180abe099, type: 3}
-      propertyPath: p3Screen
-      value: 
-      objectReference: {fileID: 1652519401}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 393fee2365e4b474db4f1a0180abe099, type: 3}
 --- !u!4 &1380555607 stripped
@@ -5027,7 +5027,7 @@ GameObject:
   - component: {fileID: 1404265072}
   m_Layer: 0
   m_Name: FirstStrectch
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5118,7 +5118,7 @@ GameObject:
   - component: {fileID: 1423957532}
   m_Layer: 0
   m_Name: 0 (9)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5279,7 +5279,7 @@ GameObject:
   - component: {fileID: 1512283941}
   m_Layer: 0
   m_Name: 0 (5)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5429,7 +5429,7 @@ GameObject:
   - component: {fileID: 1606421591}
   m_Layer: 0
   m_Name: 0
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5520,7 +5520,7 @@ GameObject:
   - component: {fileID: 1652042917}
   m_Layer: 0
   m_Name: 0 (18)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6072,7 +6072,7 @@ PrefabInstance:
     - target: {fileID: 952643693639592974, guid: 21c32f39c871c4f418c6705e69c2ac43,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 952643693639592974, guid: 21c32f39c871c4f418c6705e69c2ac43,
         type: 3}
@@ -6195,7 +6195,7 @@ GameObject:
   - component: {fileID: 1766218397}
   m_Layer: 0
   m_Name: 0 (25)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6516,7 +6516,7 @@ GameObject:
   - component: {fileID: 1897935357}
   m_Layer: 0
   m_Name: 0 (16)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6607,7 +6607,7 @@ GameObject:
   - component: {fileID: 1911165026}
   m_Layer: 0
   m_Name: 0 (4)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6910,7 +6910,7 @@ GameObject:
   - component: {fileID: 2001492060}
   m_Layer: 0
   m_Name: 0 (17)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7192,7 +7192,7 @@ GameObject:
   - component: {fileID: 2073231404}
   m_Layer: 0
   m_Name: 0 (7)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7368,7 +7368,7 @@ GameObject:
   - component: {fileID: 2103219922}
   m_Layer: 0
   m_Name: 0 (15)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7516,7 +7516,7 @@ GameObject:
   - component: {fileID: 2135935504}
   m_Layer: 0
   m_Name: 0 (6)
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -22,7 +22,6 @@ public class CarController : MonoBehaviour
 
     [Header("Transforms")]
     public Transform carModel;
-    public Transform carNormal;
     public Rigidbody carSphere;
     public Vector3 offsetFromSphere;
 
